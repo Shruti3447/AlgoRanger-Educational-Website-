@@ -2,11 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 *{
-    margin: 0;
+    box-sizing: border-box;
+    margin: 10 ;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    transition: all 0.4s ease;;
+    transition: all 0.4s ease;
+    background-color:#010718;
+    height: auto;
+    background-color: gray !important;
 }
 
 
@@ -18,26 +22,33 @@
     --text-color: #18191A;
     --search-bar: #F2F2F2;
     --search-text: #010718;
+
+
 }
 
-body{
-    height: 100vh;
-    background-color: var(--body-color);
-}
+
+
 
 body.dark{
-    --body-color: #18191A;
+    --body-color: black;
     --nav-color: #242526;
     --side-nav: #242526;
     --text-color: white;
     --search-bar: #242526;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+    margin: 0 auto;
+    
+   
 }
+
 .nav_quotes{
     width: 100%;
     height: 50px;
- 
+ margin: 0 auto;
  background-color: white;
- margin-top: 70px;
+
  color: #282525;
 
      justify-content: space-evenly;
@@ -58,7 +69,7 @@ margin-bottom: 30px;
 
 }
 .responsive {
-    max-width: 100%;
+    max-width: 720px;
     height: auto;
   }
 
@@ -148,22 +159,21 @@ nav{
     left: 0;
     height: 70px;
     width: 100%;
-    background-color: var(--nav-color);
+    background-color:#010718;
+    color: white;
     z-index: 100;
     margin-bottom: 300px;
 }
 
-body.dark nav{
-    border: 1px solid #393838;
 
-}
 
 nav .nav-bar{
     position: relative;
     height: 100%;
     max-width: 1000px;
     width: 100%;
-    background-color: var(--nav-color);
+    background-color:#010718;
+    color: white;
     margin: 0 auto;
     padding: 0 30px;
     display: flex;
@@ -172,7 +182,9 @@ nav .nav-bar{
 }
 
 nav .nav-bar .sidebarOpen{
-    color: var(--text-color);
+    color: white;
+     background-color:#010718;
+    color: white;
     font-size: 25px;
     padding: 5px;
     cursor: pointer;
@@ -182,7 +194,8 @@ nav .nav-bar .sidebarOpen{
 nav .nav-bar .logo a{
     font-size: 25px;
     font-weight: 500;
-    color: var(--text-color);
+     background-color:#010718;
+    color: white;
     text-decoration: none;
 }
 
@@ -204,7 +217,8 @@ nav .nav-bar .logo a{
     position: relative;
     font-size: 17px;
     font-weight: 400;
-    color: var(--text-color);
+    background-color:#010718;
+    color: white;
     text-decoration: none;
     padding: 10px;
 }
@@ -218,7 +232,8 @@ nav .nav-bar .logo a{
     height: 6px;
     width: 6px;
     border-radius: 50%;
-    background-color: var(--text-color);
+    background-color:#010718;
+    color: white;
     opacity: 0;
     transition: all 0.3s ease;
 }
@@ -227,44 +242,8 @@ nav .nav-bar .logo a{
     opacity: 1;
 }
 
-.nav-bar .darkLight-searchBox{
-    display: flex;
-    align-items: center;
-}
 
-.darkLight-searchBox .dark-light,
-.darkLight-searchBox .searchToggle{
-    height: 40px;
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 5px;
-}
 
-.dark-light i,
-.searchToggle i{
-    position: absolute;
-    color: var(--text-color);
-    font-size: 22px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.dark-light i.sun{
-    opacity: 0;
-    pointer-events: none;
-}
-
-.dark-light.active i.sun{
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.dark-light.active i.moon{
-    opacity: 0;
-    pointer-events: none;
-}
 
 .searchToggle i.cancel{
     opacity: 0;
@@ -293,7 +272,8 @@ nav .nav-bar .logo a{
     width: 300px;
     display: flex;
     align-items: center;
-    background-color: var(--nav-color);
+    background-color:#010718;
+    color: white;
     padding: 3px;
     border-radius: 6px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
@@ -315,8 +295,9 @@ nav .nav-bar .logo a{
     top: -4px;
     height: 12px;
     width: 12px;
-    background-color: var(--nav-color);
-    transform: rotate(-45deg);
+    background-color:#010718;
+    color: white;
+        transform: rotate(-45deg);
     z-index: -1;
 }
 
@@ -329,27 +310,33 @@ nav .nav-bar .logo a{
     border-radius: 4px;
     font-size: 14px;
     font-weight: 400;
-    color: var(--search-text);
-    background-color: var(--search-bar);
+    background-color:#010718;
+    color: white;
 }
 
 body.dark .search-field input{
-    color: var(--text-color);
+    color: white;
+    background-color:#010718;
+    color: white;
 }
 
 .search-field i{
     position: absolute;
-    color: var(--nav-color);
+    background-color:#010718;
+    color: white;
     right: 15px;
     font-size: 22px;
     cursor: pointer;
 }
 
 body.dark .search-field i{
-    color: var(--text-color);
+    color: white;
+    background-color:#010718;
+    color: white;
 }
+    
+@media screen and (max-width:700px) {
 
-@media (max-width: 790px) {
     nav .nav-bar .sidebarOpen{
         display: block;
     }
@@ -361,7 +348,8 @@ body.dark .search-field i{
         left: -100%;
         top: 0;
         padding: 20px;
-        background-color: var(--side-nav);
+        background-color:#010718;
+        color: white;
         z-index: 100;
         transition: all 0.4s ease;
     }
@@ -405,7 +393,7 @@ body.dark .search-field i{
 
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
-    background-color: #777;
+    background-color:#010718;
     color: white;
     cursor: pointer;
     padding: 18px;
@@ -414,23 +402,25 @@ body.dark .search-field i{
     text-align: left;
     outline: none;
     font-size: 15px;
+    margin: 0 auto;
   }
   
   .active, .collapsible:hover {
-    background-color: #555;
-  }
+    background-color:#010718;
+    color: white;  }
   
   .content {
     padding: 0 18px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    background-color: #f1f1f1;
+    background-color: #010718;
+    color: white;
   }
 
 
-  .topic_div{
-    margin-top: 70px;
+.topic_div{
+  margin:  0 auto;
 width: 100%;
 height: 80px;
 background-color: black;
@@ -441,7 +431,7 @@ font-weight: 800;
   }
 
 .quote_div{
-    margin-top: 2px;
+   margin: 0 auto;
 width: 100%;
 height: 50px;
 background-color: #282525;
@@ -454,7 +444,7 @@ border: 2px solid black;
 
   }
 .Note_div{
-margin-top: 15px;
+margin: 0 auto;
 max-width:800px;
 height: 200px;
 margin-left: 100px;
@@ -462,9 +452,8 @@ text-wrap: wrap;
 text-align: start;
 color: white;
 font-size: 15px;
-background-color: #18191A;
-
-
+background-color:#010718;
+color: white;
   }
 
 .img_explained{
@@ -481,38 +470,7 @@ background-color: #18191A;
     
       }
 
-  .animated-progress {
-    width: 800px;
-    height: 45px;
-    border-radius: 5px;
-    margin-left: 100px;
-    border: 1px solid rgb(189, 113, 113);
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-    margin-top: 10px;
-    
-   
-  }
   
-  .animated-progress span {
-    height: 100%;
-    display: block;
-    width: 0;
-    color: rgb(255, 251, 251);
-    line-height: 30px;
-    position: absolute;
-    text-align: end;
-    padding-right: 5px;
-
-  }
-  
-  .progress-blue span {
-    background-color: blue;
-  }
 
   /* Style the button that is used to open and close the collapsible content */
 .collapsible{
@@ -520,8 +478,7 @@ background-color: #18191A;
     color: white;
     cursor: pointer;
     padding: 18px;
-margin-top: 10px;
-    margin-left: 100px;
+    margin: 0 auto;
     border: 2px solid black;
     text-align: left;
     outline: none;
@@ -530,12 +487,14 @@ margin-top: 10px;
     height: 45px;
    padding-bottom: 15px;
    text-decoration: none;
+   margin: 0 auto;
   }
-  .active, .collapsible:hover {
+.active, .collapsible:hover {
     background-color: #18191A;
-
+    background-color: #282525;
+    color: white;
   }
-  .content {
+.content {
     padding: 0 18px;
     max-height: 0;
 text-decoration: none;
@@ -545,18 +504,22 @@ text-decoration: none;
     color: white;
     width: 800px;
     
-    margin-left: 100px;
+    margin: 0 auto;
   }
 
-  .collapsible:after {
+.collapsible:after {
     content: '\02795'; /* Unicode character for "plus" sign (+) */
     font-size: 13px;
     color: white;
     float: right;
     margin-left: 5px;
     text-decoration: none;
+    background-color: #282525;
+color: white;
   }
   
   .active:after {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
   }
+
+
